@@ -39,6 +39,7 @@ html {
   background: 50% 50% / cover;
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+
 }
 
 .group:before {
@@ -56,13 +57,32 @@ html {
 .base {
   -webkit-transform: translateZ(0);
   transform: translateZ(0) scale(1);
-  z-index: 5;
+  z-index: 60;
+
 }
 
 .base2 {
   -webkit-transform: translateZ(-50px) scale(1.2);
   transform: translateZ(-50px) scale(1.2);
-  z-index: 6;
+  z-index: 60;
+}
+
+.base3 {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0) scale(1);
+
+}
+
+.base4 {
+  -webkit-transform: translateZ(-50px) scale(1.2);
+  transform: translateZ(-70px) scale(1.5);
+
+}
+.base5 {
+  -webkit-transform: translateZ(-50px) scale(1.6);
+  transform: translateZ(-40px) translateX(70px) translateY(-70px)
+  scale(1.6);
+
 }
 
 /*group styles*/
@@ -97,12 +117,38 @@ html {
 #group3 .base{
     background: url('../img/arches-2.png') 50% 50% no-repeat;
     background-size: cover;
-  z-index: -1;
+    z-index: -1;
+
 }
 
 #group3 .base2 {
   background: url('../img/arches-3.png') 50% 50% no-repeat;
   background-size: cover;
+}
+#group3{
+    margin-top: 500px;
+    border: 10px solid #30BCCD;
+}
+#group4{
+
+    border: 10px solid #BD5BD2;
+}
+#group4 .base3{
+    background: url('../img/gc0sky.png') 50% 50% no-repeat;
+    background-size: cover;
+  z-index: 0;
+
+}
+
+#group4 .base4 {
+  background: url('../img/gc-middle.png') 50% 50% no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+#group4 .base5 {
+  background: url('../img/gc-back.png') 50% 50% no-repeat;
+  background-size: cover;
+  z-index: 4;
 }
 
 /*content styles*/
@@ -115,14 +161,15 @@ html {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: black;
-  font-family: 'Montserrat', sans-serif;
+
   font-weight: 700;
 }
 
 h1 {
   color: white;
-  font-size: 80px;
-  font-family: serif;
+  font-size: 10em;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 120px;
   text-align: center;
   position: absolute;
   z-index: 999;
@@ -139,8 +186,8 @@ h1 {
   width: 30%;
   left: 15%;
   bottom: 30%;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 
 
   transform: translateZ(100px) scale(0.6);
@@ -149,7 +196,7 @@ h1 {
 }
 .p-two {
     border-left-style: solid;
-    border-left-color: red;
+    border-left-color: #BD5BD2;
   font-size: 6em;
   color: white;
   text-shadow: 5px 5px rgba(200,200,200,0.8);
@@ -157,8 +204,28 @@ h1 {
   line-height: 40px;
   padding: 20px;
   width: 70%;
-  left: 40%;
+  left: 30%;
   bottom: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+
+  transform: translateZ(100px) scale(0.6);
+  position: absolute;
+  z-index: 999;
+}
+.p-three {
+    border-left-style: solid;
+    border-left-color: #30BCCD;
+  font-size: 6em;
+  color: white;
+  text-shadow: 5px 5px rgba(200,200,200,0.8);
+  font-family: sans-serif;
+  line-height: 40px;
+  padding: 20px;
+  width: 70%;
+  left: 4%;
+  bottom: 40%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 
@@ -197,5 +264,22 @@ img {
 hr{
     background-color: darkgrey;
     border: none;
-height: 10px;
+    height: 10px;
+}
+
+.T-black{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.alt{
+    border-left-style: solid;
+    border-left-color: black;
+    font-size: 0.7em;
+}
+
+.year-color{
+    background: linear-gradient(to right, #f79d00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
