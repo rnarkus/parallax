@@ -1,0 +1,285 @@
+/*universal styles*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*parallax styles*/
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+.parallaxLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.group {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  transform-style: inherit;
+  background: 50% 50% / cover;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+
+}
+
+.group:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: 50% 50% / cover;
+}
+
+/*base styles*/
+
+.base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0) scale(1);
+  z-index: 60;
+
+}
+
+.base2 {
+  -webkit-transform: translateZ(-50px) scale(1.2);
+  transform: translateZ(-50px) scale(1.2);
+  z-index: 60;
+}
+
+.base3 {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0) scale(1);
+
+}
+
+.base4 {
+  -webkit-transform: translateZ(-50px) scale(1.2);
+  transform: translateZ(-70px) scale(1.5);
+
+}
+.base5 {
+  -webkit-transform: translateZ(-50px) scale(1.6);
+  transform: translateZ(-40px) translateX(70px) translateY(-70px)
+  scale(1.6);
+
+}
+
+/*group styles*/
+
+
+/* slide over group 2 */
+#group1 {
+  z-index: 8;
+}
+
+#group1 .base {
+  background: white;
+}
+
+/* slide under groups 1 and 3 */
+#group2 {
+  z-index: 6;
+}
+
+#group2 .base {
+
+  background-size: cover;
+}
+
+#group2 .base2 {
+
+  background-size: cover;
+  opacity: 1;
+}
+
+/* slide over group 2*/
+#group3 .base{
+    background: url('../img/arches-2.png') 50% 50% no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+#group3 .base2 {
+  background: url('../img/arches-3.png') 50% 50% no-repeat;
+  background-size: cover;
+}
+#group3{
+    margin-top: 500px;
+    border: 10px solid #30BCCD;
+}
+#group4{
+
+    border: 10px solid #BD5BD2;
+}
+#group4 .base3{
+    background: url('../img/gc0sky.png') 50% 50% no-repeat;
+    background-size: cover;
+  z-index: 0;
+
+}
+
+#group4 .base4 {
+  background: url('../img/gc-middle.png') 50% 50% no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+#group4 .base5 {
+  background: url('../img/gc-back.png') 50% 50% no-repeat;
+  background-size: cover;
+  z-index: 4;
+}
+
+/*content styles*/
+
+.title {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: black;
+
+  font-weight: 700;
+}
+
+h1 {
+  color: white;
+  font-size: 10em;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 120px;
+  text-align: center;
+  position: absolute;
+  z-index: 999;
+}
+
+.p-one {
+    border-left-style: solid;
+    border-left-color: red;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  line-height: 40px;
+  padding: 20px;
+  width: 30%;
+  left: 15%;
+  bottom: 30%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+
+
+  transform: translateZ(100px) scale(0.6);
+  position: absolute;
+  z-index: 999;
+}
+.p-two {
+    border-left-style: solid;
+    border-left-color: #BD5BD2;
+  font-size: 6em;
+  color: white;
+  text-shadow: 5px 5px rgba(200,200,200,0.8);
+  font-family: sans-serif;
+  line-height: 40px;
+  padding: 20px;
+  width: 70%;
+  left: 30%;
+  bottom: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+
+  transform: translateZ(100px) scale(0.6);
+  position: absolute;
+  z-index: 999;
+}
+.p-three {
+    border-left-style: solid;
+    border-left-color: #30BCCD;
+  font-size: 6em;
+  color: white;
+  text-shadow: 5px 5px rgba(200,200,200,0.8);
+  font-family: sans-serif;
+  line-height: 40px;
+  padding: 20px;
+  width: 70%;
+  left: 4%;
+  bottom: 40%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+
+  transform: translateZ(100px) scale(0.6);
+  position: absolute;
+  z-index: 999;
+}
+
+figure {
+    width: 20%;
+    left: 47%;
+    bottom: 40%;
+    transform: translateZ(200px) scale(0.6);
+    position: absolute;
+    z-index: 999;
+}
+
+img {
+  width: 100%;
+}
+
+.color-box{
+    background-color: #88c6f2;
+    padding: 25px;
+    margin: 25px;
+    width: 30%;
+    height: 20%;
+    left: 40%;
+    bottom: 40%;
+    transform: translateZ(170px) scale(0.7);
+    position: absolute;
+    z-index: 998;
+}
+
+hr{
+    background-color: darkgrey;
+    border: none;
+    height: 10px;
+}
+
+.T-black{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.alt{
+    border-left-style: solid;
+    border-left-color: black;
+    font-size: 0.7em;
+}
+
+.year-color{
+    background: linear-gradient(to right, #f79d00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
